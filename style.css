@@ -1,0 +1,254 @@
+html, body {
+  max-width:100%;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed; /*Fixiert den Header am oberen Rand und zeigt ihn auch beim Scrollen an*/
+  width: 100%;
+  height: 50px; /*Notwending, um zu vermeiden, dass der Header den Body überlappt*/
+  background-color: #1B5E20;
+  z-index: 1000;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  max-width: 100%;
+}
+
+main {
+  padding-top: 50px; /*Verhindert, dass der Header den Inhalt überlappt*/
+}
+
+.introduction,
+.maincontent {
+  margin: 20px;
+}
+
+p {
+  text-align: justify;
+}
+
+/* Navbar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  width: 100%;
+}
+
+
+#menu[dir="rtl"] {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Rechtsbündige Ausrichtung für Dropdown-Links im RTL-Modus */
+#menu[dir="rtl"] .dropdown-menu {
+  text-align: right;
+  right: 0; /* Positioniere das Dropdown-Menü auf der rechten Seite */
+  left: auto; /* Verhindert, dass das Menü nach links ausgerichtet wird */
+}
+
+/* Auch für die Links innerhalb des Dropdown-Menüs */
+#menu[dir="rtl"] .dropdown-item {
+  text-align: right; /* Rechtsbündige Ausrichtung der Links */
+}
+
+/* Linksbündige Ausrichtung für Dropdown-Links im LTR-Modus */
+#menu[dir="ltr"] {
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.navbar-custom {
+  background-color: #1B5E20;
+}
+
+.navbar-brand img{
+   height: 40px;
+   width: auto;
+}
+
+.navbar-custom .nav-item {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #FAF3E0
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #1d9825;
+}
+
+
+/* Heading */
+
+.company {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  color: #FAF3E0;
+  background-image: url('images/gruen.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.company h1 {
+  background-color: #1B5E20;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+/*Tabelle*/
+
+#suche {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sort-icon {
+  cursor: pointer; /* Ändert den Cursor um zu verdeutlichen, dass auf den Pfeil geklickt werden kann*/
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+}
+
+.sort-icon.asc::after {
+  content: " ↑";
+  /* Pfeil nach oben für aufsteigend */
+}
+
+.sort-icon.desc::after {
+  content: " ↓";
+  /* Pfeil nach unten für absteigend */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  background-color: #1B5E20;
+  color: #FAF3E0;
+}
+
+td {
+  border-right: 1px solid;
+
+}
+
+/* Footer */
+
+footer {
+  background-color: #1B5E20;
+  padding: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-item {
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.footer-item:hover {
+  color: #FAF3E0;
+}
+
+/* Responsives Layout für kleine Bildschirme */
+@media (max-width: 480px) {
+  table {
+  display:block;
+  overflow-x: auto;
+  width: 100%;
+  max-width:100%;
+  font-size: 14px;
+}
+}
+
+@media (max-width: 768px) {
+  .maincontent,
+  .introduction {
+    font-size: 16px;
+  }
+
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar-nav a {
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    height:25px;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  footer li {
+    margin: 5px;
+  }
+}

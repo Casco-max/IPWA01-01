@@ -1,0 +1,15 @@
+[
+    {"land": "Deutschland", "unternehmen": "Volkswagen" , "emissionen": 80},
+    {"land": "Deutschland", "unternehmen": "Siemens" , "emissionen": 10},
+    {"land": "Deutschland", "unternehmen": "ALDI", "emissionen": 3.5},
+    {"land": "Vereinigte Staaten", "unternehmen": "Wallmart", "emissionen": 7},
+    {"land": "Vereinigte Staaten", "unternehmen": "Tesla", "emissionen": 75},
+    {"land": "Vereinigte Staaten", "unternehmen": "Amazon", "emissionen": 50},
+    {"land": "China", "unternehmen": "Xiaomi", "emissionen": 14},
+    {"land": "China", "unternehmen": "Lenovo", "emissionen":20},
+    {"land": "Italien", "unternehmen": "UniCredit Group", "emissionen": 0.5},
+    {"land": "Italien", "unternehmen": "Pirelli", "emissionen": 15},
+    {"land": "Frankreich", "unternehmen": "Groupe Carrefour", "emissionen": 4},
+    {"land": "Brasilien", "unternehmen": "JBS Group", "emissionen": 20}
+
+]
